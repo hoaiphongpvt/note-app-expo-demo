@@ -45,12 +45,17 @@ const NoteDetails = () => {
       Alert.alert('Lỗi', 'Vui lòng điền đầy đủ thông tin!')
       return
     }
+    const currentDate = new Date()
+    const timeZoneOffset = currentDate.getTimezoneOffset()
+    const localDateTime = new Date(
+      currentDate.getTime() - timeZoneOffset * 60000
+    )
     const data = {
       id: +id,
       title,
       category_id: +selectedCategory,
       content,
-      updated_at: new Date(),
+      updated_at: localDateTime,
     }
     await updateNoteFn(data, {
       onSuccess: () => {
