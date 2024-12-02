@@ -43,10 +43,11 @@ const styles = StyleSheet.create({
   },
   header_item: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
   },
   heading_item: {
+    maxWidth: 300,
     fontSize: 20,
     fontWeight: 500,
     marginBottom: 8,

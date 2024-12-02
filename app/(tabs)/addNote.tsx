@@ -57,7 +57,7 @@ const AddNote = () => {
         reset()
         Alert.alert('Thành công', 'Lưu ghi chú thành công!')
         queryClient.invalidateQueries({ queryKey: ['notes'] })
-        router.back()
+        router.push('/')
       },
       onError: () => {
         Alert.alert('Lỗi', 'Có lỗi xảy ra!')
@@ -76,6 +76,7 @@ const AddNote = () => {
             <View style={styles.group}>
               <Text style={styles.label}>Tiêu đề</Text>
               <TextInput
+                value={title}
                 style={styles.input}
                 placeholder='Nhập tiêu đề...'
                 placeholderTextColor='#999'
@@ -105,6 +106,7 @@ const AddNote = () => {
               <Text style={styles.label}>Nội dung</Text>
               <TextInput
                 multiline={true}
+                value={content}
                 style={styles.textarea}
                 placeholder='Nhập nội dung...'
                 placeholderTextColor='#999'

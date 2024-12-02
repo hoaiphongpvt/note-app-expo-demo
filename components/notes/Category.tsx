@@ -26,18 +26,21 @@ const Category: React.FC<{ id: number }> = ({ id }) => {
 }
 const styles = StyleSheet.create({
   category_1: {
+    marginTop: 2,
     fontSize: 8,
     padding: 6,
     borderRadius: 8,
     backgroundColor: 'green',
   },
   category_2: {
+    marginTop: 2,
     fontSize: 8,
     padding: 6,
     borderRadius: 8,
     backgroundColor: 'red',
   },
   category_3: {
+    marginTop: 2,
     fontSize: 8,
     padding: 6,
     borderRadius: 8,
