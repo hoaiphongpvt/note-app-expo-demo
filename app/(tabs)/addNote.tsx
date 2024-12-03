@@ -96,7 +96,7 @@ const AddNote = () => {
                     <Picker.Item
                       key={category.id}
                       label={category.name}
-                      value={category.id}
+                      value={category.id.toString()}
                     />
                   ))}
                 </Picker>
